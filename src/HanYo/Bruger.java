@@ -1,39 +1,45 @@
 package HanYo;
 
+
 public abstract class Bruger {
-    private String navn;
-    private String pass;
-    private String eMail;
+
+    private String forNavn;
+    private String efterNavn;
+    private String kodeOrd;
     private int telefonnummer;
-    public Bruger(String navn, String pass, String eMail, int telefonnummer) {
-        this.navn=navn;
-        this.eMail=eMail;
-        this.pass=pass;
+
+    public Bruger(){
+
+    }
+    public Bruger(String forNavn, String efterNavn, int telefonnummer) {
+        this.forNavn = forNavn;
+        this.efterNavn = efterNavn;
+        this.kodeOrd = kodeOrd;
         this.telefonnummer = telefonnummer;
     }
 
-    public String getNavn() {
-        return navn;
+    public String getEfterNavn() {
+        return efterNavn;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public void setEfterNavn(String efterNavn) {
+        this.efterNavn = efterNavn;
     }
 
-    public String getPass() {
-        return pass;
+    public String getForNavn() {
+        return forNavn;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setForNavn(String forNavn) {
+        this.forNavn = forNavn;
     }
 
-    public String geteMail() {
-        return eMail;
+    public String getKodeOrd() {
+        return kodeOrd;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void setKodeOrd(String kodeOrd) {
+        this.kodeOrd = kodeOrd;
     }
 
     public int getTelefonnummer() {

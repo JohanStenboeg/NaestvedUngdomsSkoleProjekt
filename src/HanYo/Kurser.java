@@ -8,14 +8,15 @@ public class Kurser {
     private double kursusAldersKrav;
     private int maxKursusDeltagere;
     private String underviser;
+    private Unge[] = arrayUnge;
+    
+
+
     public Kurser(String kursusNavn) {
         this.kursusNavn = kursusNavn;
-        this.mødeTidspunktTime = mødeTidspunktTime;
-        this.mødeTidspunktMinut = mødeTidspunktMinut;
-        this.kursusDag = kursusDag;
-        this.kursusAldersKrav = kursusAldersKrav;
-        this.maxKursusDeltagere = maxKursusDeltagere;
-        this.underviser = underviser;
+        arrayUnge = new Unge[getMaxKursusDeltagere()];
+
+
     }
 
     public String getKursusNavn() {

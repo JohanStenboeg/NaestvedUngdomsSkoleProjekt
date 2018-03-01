@@ -5,11 +5,17 @@ public class Test {
     public static void test1(Kurser kurser) {
         System.out.println("Hello world");
 
-        //String navn, int alder, String klasse, int telefonnummer, String skole
-        Unge unge1 = new Unge(18, "3X", "JuleSkolen");
-        System.out.println(unge1.getNavn());
-        Undervisere u1 = new Undervisere();
-        System.out.println(u1.getNavn());
+        Unge ung1 = new Unge("Mikkel", "Michael", 111111111);
+        ung1.setAlder(13);
+        ung1.setSkole("Sct. Jørgens");
+        System.out.println(ung1.getForNavn());
+        System.out.println(ung1.getAlder());
+
+
+        Undervisere undervisere1 = new Undervisere("Erik", "Hansen", 12341234);
+        undervisere1.seteMail("ErikHansen@mail.com");
+        System.out.println(undervisere1.geteMail());
+        System.out.println(undervisere1.getForNavn());
     }
 
 }
