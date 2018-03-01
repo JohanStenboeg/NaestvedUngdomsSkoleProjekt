@@ -2,13 +2,13 @@ package HanYo;
 
 public class Kurser {
     private String kursusNavn;
-    private double mødeTidspunktTime;
-    private double mødeTidspunktMinut;
+    private int mødeTidspunktTime;
+    private int mødeTidspunktMinut;
     private String kursusDag;
     private double kursusAldersKrav;
     private int maxKursusDeltagere;
     private String underviser;
-    public Kurser(String kursusNavn, double mødeTidspunktTime, double mødeTidspunktMinut, String kursusDag, double kursusAldersKrav, int maxKursusDeltagere, String underviser) {
+    public Kurser(String kursusNavn) {
         this.kursusNavn = kursusNavn;
         this.mødeTidspunktTime = mødeTidspunktTime;
         this.mødeTidspunktMinut = mødeTidspunktMinut;
@@ -22,11 +22,39 @@ public class Kurser {
         return kursusNavn;
     }
 
-    public double getMødeTidspunktTime() {
+    public int getMødeTidspunktTime() {
         return mødeTidspunktTime;
     }
 
-    public double getMødeTidspunktMinut() {
+    public void setKursusNavn(String kursusNavn) {
+        this.kursusNavn = kursusNavn;
+    }
+
+    public void setMødeTidspunktTime(int mødeTidspunktTime) {
+        this.mødeTidspunktTime = mødeTidspunktTime;
+    }
+
+    public void setMødeTidspunktMinut(int mødeTidspunktMinut) {
+        this.mødeTidspunktMinut = mødeTidspunktMinut;
+    }
+
+    public void setKursusDag(String kursusDag) {
+        this.kursusDag = kursusDag;
+    }
+
+    public void setKursusAldersKrav(double kursusAldersKrav) {
+        this.kursusAldersKrav = kursusAldersKrav;
+    }
+
+    public void setMaxKursusDeltagere(int maxKursusDeltagere) {
+        this.maxKursusDeltagere = maxKursusDeltagere;
+    }
+
+    public void setUnderviser(String underviser) {
+        this.underviser = underviser;
+    }
+
+    public int getMødeTidspunktMinut() {
         return mødeTidspunktMinut;
     }
 
@@ -45,9 +73,6 @@ public class Kurser {
     public String underviser() {
         return underviser;
     }
-    //String kursusNavn, double mødeTidspunktTime, double mødeTidspunktMinut,
-    // String kursusDag, String kursusAldersKrav, int maxKursusDeltagere, boolean underviserTilStede
-    Kurser parkour = new Kurser("Parkour", 17, 15, "Mandag", 15, 20, "Henrik");
 
 
 

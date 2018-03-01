@@ -1,38 +1,17 @@
 package HanYo;
 
-public class Unge {
-    private String navn;
+public class Unge extends Bruger {
     private int alder;
     private String klasse;
-    private int telefonnummer;
     private String skole;
 
-    public Unge(String navn, int alder, String klasse, int telefonnummer, String skole) {
-        this.navn = navn;
+
+    public Unge(int alder, String klasse, String skole) {
+        super("Johan", "12345", "johan@email.com", 55443322);
         this.alder = alder;
         this.klasse = klasse;
-        this.telefonnummer = telefonnummer;
         this.skole = skole;
-    }
 
-    public String getNavn() {
-        return navn;
-    }
-
-    public int getAlder() {
-        return alder;
-    }
-
-    public String getKlasse() {
-        return klasse;
-    }
-
-    public int getTelefonnummer() {
-        return telefonnummer;
-    }
-
-    public String getSkole() {
-        return skole;
     }
 }
 
