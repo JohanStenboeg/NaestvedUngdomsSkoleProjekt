@@ -49,5 +49,13 @@ public abstract class Bruger {
     public void setTelefonnummer(int telefonnummer) {
         this.telefonnummer = telefonnummer;
     }
+    @Override
+    public String toString() {
+        return "Bruger{" +
+                "fornavn='" + forNavn + '\'' +
+                ", efternavn='" + efterNavn + '\'' +
+                ", telefonnummer='" + telefonnummer + '\'' +
+                ", kodeord='" + kodeOrd + '\'' + '}';
+    }
     
 }

@@ -1,24 +1,53 @@
 package HanYo;
 
+import java.util.ArrayList;
+
 public class Kurser {
     private String kursusNavn;
     private int mødeTidspunktTime;
     private int mødeTidspunktMinut;
-    private String kursusDag;
-    private double kursusAldersKrav;
+    private EnumUgedag kursusDag;
+    private String kursusAldersKrav;
     private int maxKursusDeltagere;
     private String underviser;
-    private Unge[] = arrayUnge;
-    
+    ArrayList<Unge> ungePaaKursusAL = new ArrayList<Unge>();
+
 
 
     public Kurser(String kursusNavn) {
         this.kursusNavn = kursusNavn;
-        arrayUnge = new Unge[getMaxKursusDeltagere()];
-
+        System.out.println("Kursus:" + kursusNavn + " er oprettet.");
 
     }
 
+
+
+    public Kurser(String kursusNavn, EnumUgedag kursusDag, String underviser, String kursusAldersKrav, int maxKursusDeltagere, int mødeTidspunktTime, int mødeTidspunktMinut) {
+        this.kursusNavn = kursusNavn;
+
+        this.underviser = underviser;
+        this.kursusAldersKrav = kursusAldersKrav;
+        this.maxKursusDeltagere = maxKursusDeltagere;
+        this.mødeTidspunktTime = mødeTidspunktTime;
+        this.mødeTidspunktMinut = mødeTidspunktMinut;
+        System.out.println("Kursus: " + kursusNavn + " Dag: " + kursusDag + " Underviser: " + underviser + " Alderskrav: " + kursusAldersKrav + " Max deltagere: " + maxKursusDeltagere + " Mødetidspunkt: " + mødeTidspunktTime + ":" + mødeTidspunktMinut + " Oprettet.");
+    }
+
+    void addUngTilKursus(Unge unge){
+        ungePaaKursusAL.add(unge);
+        System.out.println("Ung tilføjet til kursus");
+    }
+
+    void removeUngFraKursus (Unge unge){
+        ungePaaKursusAL.remove(unge);
+        System.out.println("Ung fjernet fra kursus");
+    }
+    public void getKursusDag() {
+    }
+
+    public void setKursusDag(EnumUgedag kursusDag) {
+        this.kursusDag = kursusDag;
+    }
     public String getKursusNavn() {
         return kursusNavn;
     }
@@ -39,12 +68,8 @@ public class Kurser {
         this.mødeTidspunktMinut = mødeTidspunktMinut;
     }
 
-    public void setKursusDag(String kursusDag) {
-        this.kursusDag = kursusDag;
-    }
-
     public void setKursusAldersKrav(double kursusAldersKrav) {
-        this.kursusAldersKrav = kursusAldersKrav;
+        this.kursusAldersKrav = "Kursus alderskrav sat til:" + kursusAldersKrav;
     }
 
     public void setMaxKursusDeltagere(int maxKursusDeltagere) {
@@ -52,18 +77,14 @@ public class Kurser {
     }
 
     public void setUnderviser(String underviser) {
-        this.underviser = underviser;
+        this.underviser = "Underviser for dette kursus er: " + underviser;
     }
 
     public int getMødeTidspunktMinut() {
         return mødeTidspunktMinut;
     }
 
-    public String getKursusDag() {
-        return kursusDag;
-    }
-
-    public double getKursusAldersKrav() {
+    public String getKursusAldersKrav() {
         return kursusAldersKrav;
     }
 
